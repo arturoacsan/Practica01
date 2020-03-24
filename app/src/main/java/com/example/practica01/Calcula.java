@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class Calcula extends  AppCompatActivity {
-    final Aritmetica ari=new Aritmetica();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +31,7 @@ public class Calcula extends  AppCompatActivity {
                 }
                 int numero1=Integer.parseInt(strnumero1);
                 int numero2=Integer.parseInt(strnumero2);
-                ari.setN1(numero1);
-                ari.setN2(numero2);
-                txtResultado.setText("Resultado: "+(ari.suma()));
+                txtResultado.setText("Resultado: "+String.valueOf(numero1+numero2));
             }
         });
         btnResta.setOnClickListener(new View.OnClickListener() {
@@ -49,9 +46,7 @@ public class Calcula extends  AppCompatActivity {
                 }
                 int numero1=Integer.parseInt(strnumero1);
                 int numero2=Integer.parseInt(strnumero2);
-                ari.setN1(numero1);
-                ari.setN2(numero2);
-                txtResultado.setText("Resultado: "+(ari.resta()));
+                txtResultado.setText("Resultado: "+String.valueOf(numero1-numero2));
             }
         });
     }
